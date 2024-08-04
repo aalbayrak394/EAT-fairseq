@@ -307,7 +307,6 @@ class FileAudioDataset(RawAudioDataset):
         self.skipped_indices = set()
 
         # exclude data not in sample rate range     10.h5/****.wav  320000
-        print(f'self.birdset {self.birdset}')
         if not self.birdset:
             with open(manifest_path, "r") as f:
                 self.root_dir = f.readline().strip()
@@ -400,7 +399,6 @@ class FileAudioDataset(RawAudioDataset):
         for i in range(retry):
             try:
                 if self.birdset:
-                    print(f'indexing from birdset with idx, {self.dm.train_dataset[187327]["input_values"]}')
                     wav = self.dm.train_dataset[int(index)]["input_values"]
                     curr_sample_rate = 32000
                     break
@@ -422,7 +420,7 @@ class FileAudioDataset(RawAudioDataset):
             raise Exception(f"Failed to load {path_or_fp}")
 
         if self.birdset:
-            feats = wav
+            feats = wav.squeeze()
         elif self.h5_format:
             feats = torch.tensor(wav).float()
         else:
@@ -440,9 +438,7 @@ class FileAudioDataset(RawAudioDataset):
 
         # convert waveform to spectrogram
         if self.wav2fbank:
-            print(f'FEATS {feats}')
             feats = feats.unsqueeze(dim=0)
-            print(f'FEATS {feats}')
             feats = torchaudio.compliance.kaldi.fbank(feats, htk_compat=True, sample_frequency=curr_sample_rate, use_energy=False,
                                                   window_type='hanning', num_mel_bins=128, dither=0.0, frame_shift=10).unsqueeze(dim=0)
             
