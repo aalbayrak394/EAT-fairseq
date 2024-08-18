@@ -33,7 +33,7 @@ task:
 
 dataset:
   num_workers: 10
-  batch_size: 12
+  batch_size: 16
   skip_invalid_size_inputs_valid_test: true
   required_batch_size_multiple: 1
   disable_validation: true

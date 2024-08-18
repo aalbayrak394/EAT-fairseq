@@ -1,0 +1,133 @@
+/mnt/stud/home/aalbayrak/DLL/EAT-fairseq/fairseq_cli/hydra_train.py:25: UserWarning: 
+The version_base parameter is not specified.
+Please specify a compatability version level, or None.
+Will assume defaults for version 1.1
+  @hydra.main(config_path=os.path.join("..", "fairseq", "config"), config_name="config")
+DEBUG:hydra.core.utils:Setting JobRuntime:name=UNKNOWN_NAME
+DEBUG:hydra.core.utils:Setting JobRuntime:name=hydra_train
+/mnt/stud/home/aalbayrak/.conda/envs/birdset/lib/python3.10/site-packages/hydra/core/default_element.py:124: UserWarning: In 'pretraining_BirdSet': Usage of deprecated keyword in package header '# @package _group_'.
+See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/changes_to_package_header for more information
+  deprecation_warning(
+sys:1: UserWarning: 
+'pretraining_BirdSet' is validated against ConfigStore schema with the same name.
+This behavior is deprecated in Hydra 1.1 and will be removed in Hydra 1.2.
+See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/automatic_schema_matching for migration instructions.
+/mnt/stud/home/aalbayrak/.conda/envs/birdset/lib/python3.10/site-packages/hydra/main.py:90: UserWarning: 
+'pretraining_BirdSet' is validated against ConfigStore schema with the same name.
+This behavior is deprecated in Hydra 1.1 and will be removed in Hydra 1.2.
+See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/automatic_schema_matching for migration instructions.
+  _run_hydra(
+/mnt/stud/home/aalbayrak/.conda/envs/birdset/lib/python3.10/site-packages/hydra/_internal/utils.py:465: UserWarning: 
+'pretraining_BirdSet' is validated against ConfigStore schema with the same name.
+This behavior is deprecated in Hydra 1.1 and will be removed in Hydra 1.2.
+See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/automatic_schema_matching for migration instructions.
+  run_and_report(
+/mnt/stud/home/aalbayrak/.conda/envs/birdset/lib/python3.10/site-packages/hydra/_internal/core_plugins/basic_launcher.py:74: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+wandb: Currently logged in as: aalbayrak (DLL-EAT). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.6 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in /mnt/stud/home/aalbayrak/DLL/EAT-fairseq/multirun/2024-08-10/10-18-20/0/wandb/run-20240810_101840-rkvjhrcf
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run snowy-dawn-1
+wandb: ⭐️ View project at https://wandb.ai/DLL-EAT/Pretraining-BirdSet
+wandb: 🚀 View run at https://wandb.ai/DLL-EAT/Pretraining-BirdSet/runs/rkvjhrcf
+wandb: - 0.027 MB of 0.027 MB uploadedwandb: \ 0.027 MB of 0.027 MB uploadedwandb: | 0.027 MB of 0.027 MB uploadedwandb: / 0.027 MB of 0.027 MB uploadedwandb: - 0.101 MB of 1.438 MB uploadedwandb: \ 1.445 MB of 1.445 MB uploadedwandb: | 1.445 MB of 1.445 MB uploadedwandb: 
+wandb: Run history:
+wandb:                                       train/bsz ▁▁▁▁
+wandb:                                      train/clip ▇▁▆█
+wandb:                                 train/ema_decay ▁███
+wandb:                                   train/gb_free ▁▁▁▁
+wandb:                                     train/gnorm █▁▁▁
+wandb:                                      train/loss █▁▁▁
+wandb:                     train/loss_IMAGE_regression █▁▃▄
+wandb:                                  train/loss_cls █▁▁▁
+wandb:                                train/loss_scale ▁▃▃█
+wandb:       train/lr_c34292026c238657737ef782d45f6878 █▄▁▂
+wandb:                                train/lr_default █▄▁▂
+wandb:                                train/masked_pct ▁▁▁▁
+wandb:                                train/nsentences ▁▁▁▁
+wandb:                                   train/ntokens ▁▁▁▁
+wandb:                                  train/pred_var █▅▂▁
+wandb:                               train/sample_size ▁▁▁▁
+wandb:                                train/target_var █▃▁▁
+wandb:                                train/train_wall ███▁
+wandb:                                       train/ups ▁▅▂█
+wandb:                                      train/wall ▁▄██
+wandb:                                       train/wpb ▁▁▁▁
+wandb:                                       train/wps ▁▅▂█
+wandb:                                 train_inner/bsz ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                                train_inner/clip ███████▇███████▆▆▇▃█▆▇▁▇▅▆▇▇█▇██████████
+wandb:                           train_inner/ema_decay ▁▂▂▃▄▄▅▆▇▇██████████████████████████████
+wandb:                             train_inner/gb_free ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                               train_inner/gnorm █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                                train_inner/loss █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               train_inner/loss_IMAGE_regression ▆▁▃▆██▅▃▄▄▄▄▄▄▃▃▃▃▃▃▃▃▃▃▃▃▃▄▄▄▄▄▄▄▄▄▄▄▄▄
+wandb:                            train_inner/loss_cls █▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          train_inner/loss_scale ▁▁▁▁▂▄▄▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▂▄▁▁▂▂▁▂▂▂▂▄█▁▁▁▂▂
+wandb: train_inner/lr_c34292026c238657737ef782d45f6878 ▁▃▄▅▆███████▇▇▇▇▆▆▆▅▅▅▅▄▄▄▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb:                          train_inner/lr_default ▁▃▄▅▆███████▇▇▇▇▆▆▆▅▅▅▅▄▄▄▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb:                          train_inner/masked_pct ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          train_inner/nsentences ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                             train_inner/ntokens ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                            train_inner/pred_var ▃█▇▄▃▂▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                         train_inner/sample_size ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          train_inner/target_var ▆████▇▄▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          train_inner/train_wall ▃▃▃▃▁▃▃▅▃▃▃▆▅▅▅▅▅▅▅▅▃▃▃▃▃█▃▅▃▃▃▃▅▅▅▅▅▃▃▃
+wandb:                                 train_inner/ups ▃▄▅▆▆▆▇▇███▁███████████▇█▁█████▇████████
+wandb:                                train_inner/wall ▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▇▇▇▇▇▇████
+wandb:                                 train_inner/wpb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                                 train_inner/wps ▃▄▅▆▆▆▇▇███▁███████████▇█▁█████▇████████
+wandb: 
+wandb: Run summary:
+wandb:                                       train/bsz 12.0
+wandb:                                      train/clip 100.0
+wandb:                                 train/ema_decay 999.99
+wandb:                                   train/gb_free 25.4
+wandb:                                     train/gnorm 6.903
+wandb:                                      train/loss 6.251
+wandb:                     train/loss_IMAGE_regression 5.027
+wandb:                                  train/loss_cls 1.223
+wandb:                                train/loss_scale 0.0156
+wandb:       train/lr_c34292026c238657737ef782d45f6878 5e-05
+wandb:                                train/lr_default 5e-05
+wandb:                                train/masked_pct 0.801
+wandb:                                train/nsentences 12.0
+wandb:                                   train/ntokens 78720.0
+wandb:                                  train/pred_var 0.839
+wandb:                               train/sample_size 78720.0
+wandb:                                train/target_var 0.925
+wandb:                                train/train_wall 4429.0
+wandb:                                       train/ups 3.93
+wandb:                                      train/wall 128297.0
+wandb:                                       train/wpb 78720.0
+wandb:                                       train/wps 309149.1
+wandb:                                 train_inner/bsz 12.0
+wandb:                                train_inner/clip 100.0
+wandb:                           train_inner/ema_decay 999.99
+wandb:                             train_inner/gb_free 25.4
+wandb:                               train_inner/gnorm 7.032
+wandb:                                train_inner/loss 6.294
+wandb:               train_inner/loss_IMAGE_regression 5.038
+wandb:                            train_inner/loss_cls 1.256
+wandb:                          train_inner/loss_scale 0.0156
+wandb: train_inner/lr_c34292026c238657737ef782d45f6878 5e-05
+wandb:                          train_inner/lr_default 5e-05
+wandb:                          train_inner/masked_pct 0.801
+wandb:                          train_inner/nsentences 12.0
+wandb:                             train_inner/ntokens 78720.0
+wandb:                            train_inner/pred_var 0.839
+wandb:                         train_inner/sample_size 78720.0
+wandb:                          train_inner/target_var 0.926
+wandb:                          train_inner/train_wall 49.0
+wandb:                                 train_inner/ups 4.04
+wandb:                                train_inner/wall 128271.0
+wandb:                                 train_inner/wpb 78720.0
+wandb:                                 train_inner/wps 318386.7
+wandb: 
+wandb: 🚀 View run snowy-dawn-1 at: https://wandb.ai/DLL-EAT/Pretraining-BirdSet/runs/rkvjhrcf
+wandb: ⭐️ View project at: https://wandb.ai/DLL-EAT/Pretraining-BirdSet
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240810_101840-rkvjhrcf/logs
