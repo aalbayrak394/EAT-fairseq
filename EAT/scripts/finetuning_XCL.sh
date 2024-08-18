@@ -16,7 +16,7 @@ python fairseq_cli/hydra_train.py -m \
     task.weights_file=/hpc_stor03/sjtu_home/wenxi.chen/mydata/audio/AS2M/weight_train_all.csv \
     task.target_length=1024 \
     task.roll_aug=true \
-    model.model_path=/hpc_stor03/sjtu_home/wenxi.chen/model_ckpt/EAT/checkpoint10.pt \
+    model.model_path=/mnt/stud/work/aalbayrak/DLL/pretrain-checkpoints/checkpoint_last.pt \
     model.num_classes=527 \
     model.mixup=0.8 \
     model.mask_ratio=0.2 \

@@ -24,6 +24,7 @@ task:
   roll_aug: false
   noise: false
   h5_format: false
+  birdset: True
   weights_file: /hpc_stor03/sjtu_home/wenxi.chen/mydata/audio/unbalanced_finetune/weight_train_all.csv
   num_samples: 200000
   
@@ -40,6 +41,7 @@ dataset:
   required_batch_size_multiple: 2
   train_subset: train
   valid_subset: eval
+  path: /mnt/datasets/bird_recordings/birdset_hf_download/XCM/XCM_processed_3_8f5c88f8011ebbae
 
 distributed_training:
   distributed_world_size: 1
